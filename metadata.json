@@ -1,0 +1,6 @@
+{
+  "name": "News Briefing Podcast Player",
+  "description": "Create custom daily news briefings by searching, organizing, and playing the latest episodes from your favorite news podcasts sequentially.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,100 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+@layer base {
+  body {
+    background-color: #F9F7F2;
+    color: #4A4A3F;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+.font-serif {
+  font-family: 'Newsreader', Georgia, serif;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #DED9CE;
+  border-radius: 10px;
+}
+
+/* Hide scrollbar for category pills overflow */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ==========================================================================
+   Targeted Small Font Legibility Scaling (Leaves large titles unchanged)
+   ========================================================================== */
+
+/* 1. Large Small Text (+20% for small text & metadata) */
+html[data-small-text="large"] .text-\[10px\],
+html[data-small-text="large"] [class*="text-[10px]"] {
+  font-size: 0.75rem !important; /* 10px -> 12px */
+  line-height: 1.15rem !important;
+}
+
+html[data-small-text="large"] .text-\[11px\],
+html[data-small-text="large"] [class*="text-[11px]"] {
+  font-size: 0.8125rem !important; /* 11px -> 13px */
+  line-height: 1.2rem !important;
+}
+
+html[data-small-text="large"] .text-xs,
+html[data-small-text="large"] [class*="text-xs"] {
+  font-size: 0.875rem !important; /* 12px -> 14px */
+  line-height: 1.35rem !important;
+}
+
+html[data-small-text="large"] p.text-sm,
+html[data-small-text="large"] span.text-sm,
+html[data-small-text="large"] div.text-sm,
+html[data-small-text="large"] li.text-sm,
+html[data-small-text="large"] button.text-sm,
+html[data-small-text="large"] input.text-sm,
+html[data-small-text="large"] label.text-sm,
+html[data-small-text="large"] time.text-sm {
+  font-size: 0.985rem !important; /* 14px -> ~15.75px */
+  line-height: 1.55rem !important;
+}
+
+/* 2. Extra Large Small Text (+40% for small text & metadata) */
+html[data-small-text="larger"] .text-\[10px\],
+html[data-small-text="larger"] [class*="text-[10px]"] {
+  font-size: 0.84375rem !important; /* 10px -> 13.5px */
+  line-height: 1.25rem !important;
+}
+
+html[data-small-text="larger"] .text-\[11px\],
+html[data-small-text="larger"] [class*="text-[11px]"] {
+  font-size: 0.90625rem !important; /* 11px -> 14.5px */
+  line-height: 1.3rem !important;
+}
+
+html[data-small-text="larger"] .text-xs,
+html[data-small-text="larger"] [class*="text-xs"] {
+  font-size: 1rem !important; /* 12px -> 16px */
+  line-height: 1.5rem !important;
+}
+
+html[data-small-text="larger"] p.text-sm,
+html[data-small-text="larger"] span.text-sm,
+html[data-small-text="larger"] div.text-sm,
+html[data-small-text="larger"] li.text-sm,
+html[data-small-text="larger"] button.text-sm,
+html[data-small-text="larger"] input.text-sm,
+html[data-small-text="larger"] label.text-sm,
+html[data-small-text="larger"] time.text-sm {
+  font-size: 1.1rem !important; /* 14px -> 17.6px */
+  line-height: 1.7rem !important;
+}

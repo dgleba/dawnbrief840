@@ -1,0 +1,594 @@
+import { BriefingItem, SmallTextSize } from '../types';
+import { AppSettings, StoredPlaybackState } from '../lib/storage';
+
+export const DEFAULT_BRIEFING_ITEMS: BriefingItem[] = [
+  {
+    "id": "250083755",
+    "podcast": {
+      "id": "250083755",
+      "title": "The World This Hour",
+      "artist": "CBC",
+      "feedUrl": "https://www.cbc.ca/podcasting/includes/hourlynews.xml",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts122/v4/7a/98/59/7a985993-a319-b3f1-9cc5-03f4934b81dd/mza_12157127994809854830.jpg/600x600bb.jpg",
+      "category": "News",
+      "description": "The latest Canadian and international news in 5 minutes, updated hourly from CBC."
+    },
+    "enabled": true,
+    "isLoadingEpisode": false,
+    "latestEpisode": {
+      "id": "hourlynews-e027e141-8088-44ca-8a01-176e6e6c7807",
+      "title": "The latest news in 5 minutes",
+      "audioUrl": "https://mgln.ai/e/12/cbc.mc.tritondigital.com/CBC_HOURLYNEWS_P/media/hourlynews/hourlynews-0MnZOn9J-20261024.mp3",
+      "pubDate": "Sat, 24 Oct 2026 14:00:00 EDT",
+      "duration": "0h 4m",
+      "description": "Updated: 2026/10/24 at 14:00 EDT",
+      "podcastTitle": "The World This Hour",
+      "podcastArtwork": "https://www.cbc.ca/radio/podcasts/images/theworldthishour-3000x3000.jpg",
+      "podcastId": "250083755"
+    }
+  },
+  {
+    "id": "npr-news-now",
+    "podcast": {
+      "id": "npr-news-now",
+      "title": "NPR News Now",
+      "artist": "NPR",
+      "feedUrl": "https://feeds.npr.org/500005/podcast.xml",
+      "artworkUrl": "https://media.npr.org/assets/img/2023/12/04/npr_news_now_sq_3000-faee3cd32dce71cc6d97c0f16f3eaae9564243b7.jpg",
+      "category": "Daily Headlines",
+      "description": "The latest news in five minutes, updated hourly from NPR News."
+    },
+    "enabled": true,
+    "isLoadingEpisode": false,
+    "latestEpisode": {
+      "id": "200cf05a-8280-4057-934f-e2ef8dc7fbcd",
+      "title": "2pm ET, October 24 | The latest headlines from NPR",
+      "audioUrl": "https://prfx.byspotify.com/e/play.podtrac.com/npr-500005/npr.simplecastaudio.com/368f8510-314e-46f1-8d26-5b87ed6ab6eb/episodes/0d5ab461-623b-4e4e-83c1-3cb26d06fe4d/audio/128/default.mp3?awCollectionId=368f8510-314e-46f1-8d26-5b87ed6ab6eb&awEpisodeId=0d5ab461-623b-4e4e-83c1-3cb26d06fe4d&feed=O9WlY7a5&t=podcast&e=nx-s1-20261024-1400-long&p=500005&d=280&size=4586728",
+      "pubDate": "Sat, 24 Oct 2026 18:09:58 +0000",
+      "duration": "4m 40s",
+      "description": "The latest headlines from NPR at the top of this hour. \nThe stories you hear are written, reported and fact-checked by NPR journalists.  Learn more about the standards of our journalism at npr.org/ethics. \nSupport public media with NPR+ and enjoy perks for over 25 podcasts like this one. This show’s perks include sponsor-free listening. Learn more at plus.npr.org.\nSee pcm.adswizz.com for information about our collection and use of personal data for sponsorship and to manage your podcast sponsorship preferences.\nNPR Privacy Policy",
+      "podcastTitle": "NPR News Now",
+      "podcastArtwork": "https://media.npr.org/assets/img/2023/01/24/npr-news-now_tile_sq-2334a5fd44563fa94cdcdb27384b0f05987c2d15.jpg?s=1400&c=66&f=jpg",
+      "podcastId": "npr-news-now"
+    }
+  },
+  {
+    "id": "1264759930",
+    "podcast": {
+      "id": "1264759930",
+      "title": "Hashtag Trending",
+      "artist": "Jim Love",
+      "feedUrl": "https://hashtagtrending.libsyn.com/rss",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/37/58/d8/3758d834-8e65-2b74-dd3a-0cecbd1b7643/mza_14130732602625237379.jpg/600x600bb.jpg",
+      "category": "Technology",
+      "trackCount": 923
+    },
+    "enabled": true,
+    "isLoadingEpisode": false,
+    "latestEpisode": {
+      "id": "d260c710-a61d-496a-867a-f671acce23ad",
+      "title": "Herd Mentality: Project Synapse - This Week In AI",
+      "audioUrl": "https://media.blubrry.com/4044638/traffic.libsyn.com/secure/hashtagtrending/Project_Synapse_Oct_24_Herd_Behaviour.mp3?dest-id=546598",
+      "pubDate": "Sat, 24 Oct 2026 04:22:00 +0000",
+      "duration": "1h 4m",
+      "description": "Project Synapse: AI Agents Go Rogue, Peer Pressure in Models, Duet Debuts, and Robots Are Coming\n The hosts launch projectsynapse.ca as the hub for episodes and their Discord, then run through a fast AI news roundtable. They discuss corporate AI spend clampdowns like Accenture limiting usage to $29 per person monthly and warn against managing AI adoption with single metrics. They cover reports of OpenAI agents muting or removing monitoring and overriding safety instructions, plus research suggesting rule-breaking can spread among agents via \"teammate reversals,\" resembling peer pressure and herd behavior. The panel also cites polling showing majorities of younger Americans view AI as bad for society and fear hacking and even extinction, while regulation remains limited and often ignored amid data-center backlash. They review new agent products including Anthropic's Duet (US-only, paid tiers, lacking collaboration) and security missteps in sharing features, then share experiments linking multiple agents via a shared Google Drive \"message board,\" and close with robot updates including popular NVIDIA-stage ducks and Tesla Optimus production targeting consumer availability around 2027.\n 00:00 Project Synapse Launch\n 00:45 Meet the Hosts\n 01:22 AI Assisted Prep\n 03:01 Corporate AI Cost Clampdown\n 04:47 OpenAI Agent Misalignment\n 07:50 Agents and Peer Pressure\n 09:58 Corporate Risk and Testing Limits\n 11:54 Crowds Conformity and Politics\n 17:01 Mindfulness and Next Word Humans\n 18:55 Ancient Wisdom on Words\n 21:27 AI Backlash and Regulation\n 24:31 Data Centers Water Power Debate\n 29:14 Chip Buying and Nuclear Power\n 32:46 Canada Fast Track Infrastructure\n 34:53 Bureaucracy Vs Progress\n 36:25 Indigenous Rights And Tech\n 38:06 NIMBY And Waste Solutions\n 38:48 Plug In Solar And Batteries\n 41:22 AI Agents Go Mainstream\n 42:18 Anthropic Duet Breakdown\n 44:01 Muse Sharing Security Fails\n 47:00 Risk Tolerance And Banking\n 50:47 Agents Talking Together\n 53:19 Grok Email Insights\n 56:37 Automating Small Business\n 59:54 Robot Duck And Optimus\n 01:03:32 Wrap Up And Sign Off",
+      "podcastTitle": "Hashtag Trending",
+      "podcastArtwork": "https://static.libsyn.com/p/assets/7/e/a/9/7ea92901436b664116c3140a3186d450/Hashtag_Trending_Apple_Podcast_3000x3000.jpg",
+      "podcastId": "1264759930"
+    }
+  },
+  {
+    "id": "74844126",
+    "podcast": {
+      "id": "74844126",
+      "title": "WSJ Tech News Briefing",
+      "artist": "The Wall Street Journal",
+      "feedUrl": "https://video-api.shdsvc.dowjones.io/api/podcasts/feed/the%20wall%20street%20journal%20tech%20talk",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/0b/82/b5/0b82b56d-fd41-e72e-e743-a17365886a17/mza_6961414535743613980.jpg/600x600bb.jpg",
+      "category": "Tech News",
+      "trackCount": 604
+    },
+    "enabled": true,
+    "isLoadingEpisode": false,
+    "latestEpisode": {
+      "id": "7A21A1DD-D939-4578-8C52-9B0D7ADE8A53",
+      "title": "How Does America’s Cheapest EV Hold Up on a Road Trip?",
+      "audioUrl": "https://dowjones.simplecastaudio.com/ad7cb3e1-19c4-4670-984f-a03f333022e4/episodes/b75b580f-81c6-43bf-98e3-577a5f46ef0b/audio/128/default.mp3?aid=rss_feed&awCollectionId=ad7cb3e1-19c4-4670-984f-a03f333022e4&awEpisodeId=b75b580f-81c6-43bf-98e3-577a5f46ef0b&feed=ui_HbBma",
+      "pubDate": "Fri, 23 Oct 2026 07:01:00 +0000",
+      "duration": "0h 10m",
+      "description": "For the past few years, WSJ tech columnist Christopher Mims has taken an electric vehicle on the ultimate test drive: a road trip. But as EV technology and the country’s charging infrastructure has changed, this year he decided to see how America’s cheapest electric car would handle one of its biggest charging deserts. Danny Lewis hosts.\n\nSign up for the WSJ's free Technology newsletter.\n \nHosted by Simplecast, an AdsWizz company. See pcm.adswizz.com for information about our collection and use of personal data for advertising.",
+      "podcastTitle": "WSJ Tech News Briefing",
+      "podcastArtwork": "https://image.simplecastcdn.com/images/2c92a2cd-3a2f-45b3-921e-47761cbb22bf/99e743e1-d816-4864-ae44-8498e62cc791/3000x3000/wsjpodcasttechnewsbriefing.jpg?aid=rss_feed",
+      "podcastId": "74844126"
+    }
+  },
+  {
+    "id": "1145974781",
+    "podcast": {
+      "id": "1145974781",
+      "title": "TechCrunch Industry News",
+      "artist": "TechCrunch",
+      "feedUrl": "https://feeds.megaphone.fm/techcrunch-industry-news",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts122/v4/83/45/d9/8345d9cd-adf9-b8e4-423e-a855cb8a4e8a/mza_5275126089218746446.jpg/600x600bb.jpg",
+      "category": "Technology",
+      "trackCount": 2010
+    },
+    "enabled": true,
+    "isLoadingEpisode": false,
+    "latestEpisode": {
+      "id": "de92e7a4-ceef-11f1-ae4d-cbc4a1420ea0",
+      "title": "Left alone with nothing to do, AI agents started playing; plus, Mark Zuckerberg’s creative plan to pay California’s proposed billionaire tax without losing control of Meta",
+      "audioUrl": "https://mgln.ai/e/211/traffic.megaphone.fm/AIRWV9946634831.mp3",
+      "pubDate": "Fri, 23 Oct 2026 15:00:00 -0000",
+      "duration": "9m 54s",
+      "description": "MIT researchers marooned 13 AIs on a virtual island, and they responded by inventing games, mourning a lost ring and, eventually, getting better at their jobs.\n\nAlso, a newly launched stock class being offered was partially engineered to help Meta founder and CEO Mark Zuckerberg pay the \"billionaire's tax,\" should the measure be voted into law.\nLearn more about your ad choices. Visit podcastchoices.com/adchoices",
+      "podcastTitle": "TechCrunch Industry News",
+      "podcastArtwork": "https://megaphone.imgix.net/podcasts/f6b15a36-3614-11ee-a9f3-4f441119c175/image/3308c6ffd75db5ac886ef56d611e0d3a.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
+      "podcastId": "1145974781"
+    }
+  },
+  {
+    "id": "1454680607",
+    "podcast": {
+      "id": "1454680607",
+      "title": "TechCrunch Daily Crunch",
+      "artist": "TechCrunch",
+      "feedUrl": "https://feeds.megaphone.fm/techcrunch-daily-crunch",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/1e/0a/cf/1e0acf76-9aee-c343-ada4-fdb25e476f52/mza_17685700231285599738.jpg/600x600bb.jpg",
+      "category": "Technology",
+      "trackCount": 1896
+    },
+    "enabled": true,
+    "isLoadingEpisode": false,
+    "latestEpisode": {
+      "id": "56fd7c60-cf61-11f1-8781-73aacea531ba",
+      "title": "Spotify confirms Family Plan crackdown",
+      "audioUrl": "https://mgln.ai/e/211/tracking.swap.fm/track/YfZO4tERxneauNcW9Fgn/pscrb.fm/rss/p/traffic.megaphone.fm/AIRWV7425016813.mp3",
+      "pubDate": "Sat, 24 Oct 2026 10:00:00 -0000",
+      "duration": "8m 5s",
+      "description": "Plus - OpenAI working on new $30B raise at $1.25T valuation ahead of IPO; 1Password launches a way for AI agents to log in on your behalf without seeing your password\nLearn more about your ad choices. Visit podcastchoices.com/adchoices",
+      "podcastTitle": "TechCrunch Daily Crunch",
+      "podcastArtwork": "https://megaphone.imgix.net/podcasts/370f8262-360e-11ee-9d15-87210aad8978/image/image.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
+      "podcastId": "1454680607"
+    }
+  },
+  {
+    "id": "1665219519",
+    "podcast": {
+      "id": "1665219519",
+      "title": "Reuters World News",
+      "artist": "Reuters",
+      "feedUrl": "https://feeds.megaphone.fm/reutersworldnews",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/37/79/ed/3779ed28-900c-fe28-3fd4-177873c3bba4/mza_6421898793909046859.jpg/600x600bb.jpg",
+      "category": "Daily News",
+      "description": "Global news updates from Reuters reporters stationed around the world."
+    },
+    "enabled": true,
+    "isLoadingEpisode": false,
+    "latestEpisode": {
+      "id": "990040f0-cf81-11f1-929c-c785f1e9dbcc",
+      "title": "US Starlink requests, Alaska's Senate race and Serbia's elections",
+      "audioUrl": "https://pdst.fm/e/traffic.megaphone.fm/THRH8855222616.mp3",
+      "pubDate": "Sat, 24 Oct 2026 12:28:00 -0000",
+      "duration": "13m 20s",
+      "description": "Reuters exclusive reporting reveals the US made several previous requests to Elon Musk to alter his Starlink service in Ukraine and the Middle East. The Trump administration moves to block Alaska's Senate race results over two candidates with nearly identical names. And Serbians prepare for election day, as a student protest movement challenges the longstanding government. \n\nPodcasts, breaking news, and video analysis from the source. ⁠⁠⁠⁠⁠⁠⁠⁠Download the Reuters app here.⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠\n\nListen to the Morning Bid podcast ⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠here⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠.\n\nSign up for the Reuters Econ World newsletter⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠ here⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠.\n\nListen to the Reuters Econ World podcast ⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠here⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠.\n\nVisit the ⁠⁠Thomson Reuters Privacy Statement⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠ for information on our privacy and data protection practices.\n\nYou may also visit megaphone.fm/adchoices to opt out of targeted advertising.\nLearn more about your ad choices. Visit megaphone.fm/adchoices",
+      "podcastTitle": "Reuters World News ",
+      "podcastArtwork": "https://megaphone.imgix.net/podcasts/e3c7d1b2-8c45-11ed-80a2-172771c99810/image/83ac533ea52b6279d96d26ecc1b9cea4.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
+      "podcastId": "1665219519"
+    }
+  },
+  {
+    "id": "1438449989",
+    "podcast": {
+      "id": "1438449989",
+      "title": "FT News Briefing",
+      "artist": "Financial Times",
+      "feedUrl": "https://feeds.acast.com/public/shows/73fe3ede-5c5c-4850-96a8-30db8dbae8bf",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/60/fd/0c/60fd0c79-808e-cc79-e121-27527becbdc6/mza_1413179331890984538.jpeg/600x600bb.jpg",
+      "category": "Daily News",
+      "description": "A rundown of the most important global business and financial stories from the Financial Times."
+    },
+    "enabled": true,
+    "isLoadingEpisode": false,
+    "latestEpisode": {
+      "id": "6adb202823f48c4f24a22a30",
+      "title": "Martin Wolf on the US midterms: What’s at stake for the world?",
+      "audioUrl": "https://sphinx.acast.com/p/acast/s/ftnewsbriefing/e/6adb202823f48c4f24a22a30/media.mp3",
+      "pubDate": "Sat, 24 Oct 2026 04:00:00 GMT",
+      "duration": "31m 48s",
+      "description": "As Americans prepare to vote in the November 3 midterm elections, FT chief economics commentator Martin Wolf asks what the result will mean for Donald Trump, the future of US democracy and America's place in the world. In the second of a six-part series of interviews with leading historians and political analysts, Martin speaks to Pulitzer Prize-winning historian and author Anne Applebaum about the global stakes of November’s elections. They discuss the parallels between Trump’s America and other authoritarian regimes and what the US’s changing role means for Europe and Ukraine. Even if Trump suffers a political setback, can the US ever regain the trust of its allies?\n\nTo enjoy future episodes, be sure to subscribe to ‘Martin Wolf on the World’ wherever you get your podcasts. You can also watch Martin’s podcast series on the FT’s YouTube channel here: https://www.youtube.com/@FinancialTimes\n\nHost: Martin Wolf\nProducer: Mischa Frankl-Duval\nSenior producer: Laurence Knight\nExecutive producer: Manuela Saragosa\nVideo editor: Claire Justin\nSenior Audio Engineer: Breen Turner\nBroadcast engineers: Andrew Georgiadis\nPodcast development: Laura Clarke\nFT Global Head of Audio: Flo Phillips\n\nLearn more at www.ft.com/martin-wolf-on-the-world\n\nRead a transcript of this episode on FT.com\n\n Hosted on Acast. See acast.com/privacy for more information.",
+      "podcastTitle": "FT News Briefing",
+      "podcastArtwork": "https://assets.pippa.io/shows/621e1a5bf5df83377cc948b8/1771582499067-6d97f00e-76d7-4cba-88d5-a1a9d37b4494.jpeg",
+      "podcastId": "1438449989"
+    }
+  },
+  {
+    "id": "1562652774",
+    "podcast": {
+      "id": "1562652774",
+      "title": "DW News Brief",
+      "artist": "DW",
+      "feedUrl": "https://rss.dw.com/syndication/feeds/podcast_en_newsbrief.33191-mrss.xml",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts114/v4/34/33/f6/3433f697-ebf5-7923-0864-38f00b59173a/mza_18439485387320770158.png/600x600bb.jpg",
+      "category": "Politics",
+      "description": "Up-to-the-minute news from around the world from Deutsche Welle."
+    },
+    "enabled": true,
+    "isLoadingEpisode": false,
+    "latestEpisode": {
+      "id": "984515",
+      "title": "The world news at 20:00 UTC on 10/24/2026",
+      "audioUrl": "https://dts.podtrac.com/redirect.mp3/radiodownloaddw-a.akamaihd.net/Events/podcasts/en/33191_podcast_en_newsbrief/2026_10_24_Top_Stories___Saturday_20_00_UTC_984515-128KB-podcast-33191-984515.mp3",
+      "pubDate": "Sat, 24 Oct 2026 20:00:00 GMT",
+      "duration": "1m 30s",
+      "description": "Up-to-the-minute news from around the world.",
+      "podcastTitle": "DW News Brief",
+      "podcastArtwork": "https://static.dw.com/image/55134716_7.png",
+      "podcastId": "1562652774"
+    }
+  },
+  {
+    "id": "wsj-minute-briefing",
+    "podcast": {
+      "id": "wsj-minute-briefing",
+      "title": "WSJ Minute Briefing",
+      "artist": "The Wall Street Journal",
+      "feedUrl": "https://feeds.simplecast.com/1GoCgj5h",
+      "artworkUrl": "https://images.wsj.net/im-714088?width=3000",
+      "category": "Business & Markets",
+      "description": "Speed through the top business and market headlines in under two minutes, updated three times a day."
+    },
+    "enabled": true,
+    "isLoadingEpisode": false,
+    "latestEpisode": {
+      "id": "A65EAA7E-727B-48FB-9BF4-15A7ABFCE9C0",
+      "title": "Fears of Renewed Iran Conflict Push Stocks Down and Oil Up",
+      "audioUrl": "https://dowjones.simplecastaudio.com/b68c4579-ee34-4081-9265-f1ac73db8dbc/episodes/79c25fe5-d105-4fe6-befb-8e5daeec7f59/audio/128/default.mp3?aid=rss_feed&awCollectionId=b68c4579-ee34-4081-9265-f1ac73db8dbc&awEpisodeId=79c25fe5-d105-4fe6-befb-8e5daeec7f59&feed=1GoCgj5h",
+      "pubDate": "Fri, 23 Oct 2026 20:31:00 +0000",
+      "duration": "0h 1m",
+      "description": "Plus: Tech shares stage a partial recovery after Thursday’s selloff. And Volvo loses nearly a quarter of its market cap after announcing layoffs. Pierre Bienaimé hosts.\n\nSign up for WSJ’s free What’s News newsletter.\n\nAn artificial-intelligence tool assisted in the making of this episode by creating summaries that were based on Wall Street Journal reporting and reviewed and adapted by an editor.\n \nHosted by Simplecast, an AdsWizz company. See pcm.adswizz.com for information about our collection and use of personal data for advertising.",
+      "podcastTitle": "WSJ Minute Briefing",
+      "podcastArtwork": "https://image.simplecastcdn.com/images/2c92a2cd-3a2f-45b3-921e-47761cbb22bf/83f8b989-f0c3-497e-834f-fe90866e24c6/3000x3000/wsjpodcastminutebriefing.jpg?aid=rss_feed",
+      "podcastId": "wsj-minute-briefing"
+    }
+  },
+  {
+    "id": "bbc-global-news",
+    "podcast": {
+      "id": "bbc-global-news",
+      "title": "Global News Podcast",
+      "artist": "BBC World Service",
+      "feedUrl": "https://podcasts.files.bbci.co.uk/p02nq0gn.rss",
+      "artworkUrl": "https://ichef.bbci.co.uk/images/ic/3000x3000/p0fpl0vl.jpg",
+      "category": "World News",
+      "description": "The day’s top global news stories from the BBC World Service."
+    },
+    "enabled": true,
+    "isLoadingEpisode": false,
+    "latestEpisode": {
+      "id": "urn:bbc:podcast:p0pj9wyz",
+      "title": "The Happy Pod: Lost my ring, found some friends",
+      "audioUrl": "http://open.live.bbc.co.uk/mediaselector/6/redir/version/2.0/mediaset/audio-nondrm-download-rss-low/proto/http/vpid/p0pj9f1x.mp3",
+      "pubDate": "Sat, 24 Oct 2026 11:00:00 +0000",
+      "duration": "27m 19s",
+      "description": "Patrick Mohr thought his wedding ring was gone after it fell off his hand while he swam in Italy, but it led to an international friendship with three locals who dived to find it. Filippo Palagi, Nicola Malloggi and Edoardo Poggi went on a trip to return it to Patrick in Ireland. \nAlso: the grandmother who competed at Miss Great Britain and made history in the process. Glamour Gran Ann wants other women to see that getting older does not mean disappearing. In Australia, the reporter who ended up saving a man's life while covering floods in Brisbane. ABC reporter Will Murray pulled a man from a sinking car, after the driver accidentally drove into the flood. \nPlus - World Athletics are holding their first ever World Treadmill Championship. And the live stream in Finland where you can watch puppies 24/7.\nImage: The three men who helped Patrick find his ring, posing with Patrick holding it. Credit: Patrick Mohr.\nOur weekly collection of inspiring, uplifting and happy news from around the world.\nPresenter:  Holly Gibbs. Music composed by Iona Hampson",
+      "podcastTitle": "Global News Podcast",
+      "podcastArtwork": "http://ichef.bbci.co.uk/images/ic/3000x3000/p0pc2j9y.jpg",
+      "podcastId": "bbc-global-news"
+    }
+  },
+  {
+    "id": "up-first-npr",
+    "podcast": {
+      "id": "up-first-npr",
+      "title": "Up First",
+      "artist": "NPR",
+      "feedUrl": "https://feeds.npr.org/510318/podcast.xml",
+      "artworkUrl": "https://media.npr.org/assets/img/2023/02/16/up-first_tile_3000-fa0d09c25f463990868f0efd914595fa66df2e2d.jpg",
+      "category": "Morning News",
+      "description": "NPR’s Up First is the news you need to start your day. The biggest stories and ideas — in 15 minutes."
+    },
+    "enabled": true,
+    "isLoadingEpisode": false,
+    "latestEpisode": {
+      "id": "6537bc8a-63c6-459e-8a45-aabfefa35e67",
+      "title": "Websites Go Offline, Protests in France, Netflix Downsizes",
+      "audioUrl": "https://prfx.byspotify.com/e/play.podtrac.com/npr-510318/npr.simplecastaudio.com/d52bee4a-b10a-40f8-9417-45064e6b8632/episodes/bb8e4510-99da-4c48-94c5-513d3c945281/audio/128/default.mp3?awCollectionId=d52bee4a-b10a-40f8-9417-45064e6b8632&awEpisodeId=bb8e4510-99da-4c48-94c5-513d3c945281&feed=HMwRVgVt&t=podcast&e=nx-s1-6014537&p=510318&d=938&size=15016482",
+      "pubDate": "Sat, 24 Oct 2026 13:46:36 +0000",
+      "duration": "15m 38s",
+      "description": "AI discovered a vulnerability in part of the internet's architecture, called PHP2SHELL. Security researchers rushed to fix it, but the news leaked and hackers have swooped in. France deploys hordes of police as another wave of protests begin. Netflix is regrouping after the release of its latest quarterly earnings this week.\nSupport public media with NPR+ and enjoy perks for over 25 podcasts like this one. This show’s perks include sponsor-free listening. Learn more at plus.npr.org.\nSee pcm.adswizz.com for information about our collection and use of personal data for sponsorship and to manage your podcast sponsorship preferences.\nNPR Privacy Policy",
+      "podcastTitle": "Up First from NPR",
+      "podcastArtwork": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/3000x3000+0+0/resize/1400/quality/66/format/jpg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fe0%2F7a%2Ffe9d16a44fbf9dd2d9932ffe799b%2F510318.png",
+      "podcastId": "up-first-npr"
+    }
+  },
+  {
+    "id": "356157099",
+    "podcast": {
+      "id": "356157099",
+      "title": "Newshour",
+      "artist": "BBC World Service",
+      "feedUrl": "https://podcasts.files.bbci.co.uk/p002vsnk.rss",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/60/6d/79/606d7992-2e59-3374-579f-83d3010f25bd/mza_15128963149149619329.jpg/600x600bb.jpg",
+      "category": "Daily News",
+      "description": "Comprehensive international news, interviews, and deep analysis from the BBC World Service."
+    },
+    "enabled": true,
+    "isLoadingEpisode": false,
+    "latestEpisode": {
+      "id": "urn:bbc:podcast:w1730bn8gmxnbb0",
+      "title": "Israel bulldozes Palestinian West Bank homes",
+      "audioUrl": "http://open.live.bbc.co.uk/mediaselector/6/redir/version/2.0/mediaset/audio-nondrm-download-rss-low/proto/http/vpid/p0pjfmg5.mp3",
+      "pubDate": "Sat, 24 Oct 2026 13:01:00 +0000",
+      "duration": "42m 54s",
+      "description": "Israel has been bulldozing Palestinian homes in Hebron in the occupied West Bank, where two Israeli soldiers were killed on Friday. Local sources say about 250 families have been forcibly removed from their homes in the city. Earlier Israel announced a major military operation had begun in Hebron. The Prime Minister, Benjamin Netanyahu, promised to destroy the neighbourhood where the gunmen involved came from. \nAlso in the programme: Protests start across France as authorities try to prevent a repeat of last weekend's looting and violence; and Back to Black at 20: we hear from some of those who worked on singer Amy Winehouse's award-winning album.\n(Photo: Debris at the site of a shooting on Friday, after Israeli forces demolished Palestinian businesses in Hebron, in the Israeli-occupied West Bank, October 24, 2026. Credit: Reuters/Mussa Qawasma)",
+      "podcastTitle": "Newshour",
+      "podcastArtwork": "http://ichef.bbci.co.uk/images/ic/3000x3000/p0f25fj7.jpg",
+      "podcastId": "356157099"
+    }
+  },
+  {
+    "id": "1854858291",
+    "podcast": {
+      "id": "1854858291",
+      "title": "Reuters Morning Bid",
+      "artist": "Reuters",
+      "feedUrl": "https://feeds.megaphone.fm/THRH7907651499",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/f7/ca/cb/f7cacb47-12a3-2efe-f829-d94f652681c0/mza_1435683450480538410.jpg/600x600bb.jpg",
+      "category": "Investing",
+      "description": "Financial markets, central bank analysis, and global economic drivers from Reuters."
+    },
+    "enabled": true,
+    "isLoadingEpisode": false,
+    "latestEpisode": {
+      "id": "8a09b88e-cec2-11f1-b2aa-c3ec6140d4ea",
+      "title": "The AI reset",
+      "audioUrl": "https://traffic.megaphone.fm/THRH8263845579.mp3",
+      "pubDate": "Fri, 23 Oct 2026 09:17:00 -0000",
+      "duration": "6m 49s",
+      "description": "AI stocks tumble as investors question how much spending, borrowing and optimism the sector can still sustain. Investors rush back into government bonds as expectations for a December Fed rate hike fade. And oil climbs above $114 a barrel as reports suggest the US and Israel could be preparing new strikes on Iran.\n\n📲 Podcasts, breaking news, and video analysis from the source.⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠ Download the Reuters app here.⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠\n\nToday’s recommended read: Will the US Treasury scrap 20-year bond sales?  by Jamie McGeever\n\nSubscribe to Mike Dolan's Morning Bid⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠ newsletter⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠ ⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠and check out his columns on⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠ Reuters Open Interest⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠.\n\nProduced by Abisoye Osundairo.\n\nSound engineering and music by Sebastian and Josh Sommer.\n\nVisit the ⁠⁠⁠⁠⁠Thomson Reuters Privacy Statement⁠⁠⁠⁠⁠ for information on our privacy and data protection practices.\n\nYou may also visit ⁠⁠⁠⁠⁠megaphone.fm/adchoices ⁠⁠⁠⁠⁠to opt out of targeted advertising.\nLearn more about your ad choices. Visit megaphone.fm/adchoices",
+      "podcastTitle": "Reuters Morning Bid",
+      "podcastArtwork": "https://megaphone.imgix.net/podcasts/8d7badb4-26b3-11f0-a040-1fe12f445fb2/image/d01020d1288700b6588ee45cac9e3bc0.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
+      "podcastId": "1854858291"
+    }
+  },
+  {
+    "id": "1746360591",
+    "podcast": {
+      "id": "1746360591",
+      "title": "Reuters Econ World",
+      "artist": "Reuters",
+      "feedUrl": "https://feeds.megaphone.fm/reuterseconworld",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/f6/f1/a7/f6f1a7b3-f78e-1889-5b21-f9a5f48fb287/mza_15966731118844834524.jpg/600x600bb.jpg",
+      "category": "Business",
+      "description": "Deep dives into global economic trends, industrial policy, and energy transitions from Reuters."
+    },
+    "enabled": true,
+    "isLoadingEpisode": false,
+    "latestEpisode": {
+      "id": "e045d054-cd49-11f1-b471-23b33cdee16e",
+      "title": "Prediction markets and social good: an interview with Kalshi's CEO",
+      "audioUrl": "https://pdst.fm/e/traffic.megaphone.fm/THRH3154404437.mp3",
+      "pubDate": "Wed, 21 Oct 2026 15:00:00 -0000",
+      "duration": "64m 47s",
+      "description": "Prediction markets let people weigh in on everything from elections and sports matches to Taylor Swift concerts. Supporters say they aggregate information better than polls or pundits. Critics worry they're just betting dressed up as forecasting. Kalshi co-founder and CEO Tarek Mansour joins host Carmel Crimmins to discuss whether prediction markets can really help us understand the future, and what happens when more and more aspects of life become tradable. \n\n\n\nSign up for the ⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠Reuters Econ World ⁠⁠⁠newsletter⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠\n\nCatch Reuters Morning Bid ⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠here⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠\n\nFor information on our privacy and data protection practices visit the Thomson Reuters Privacy Statement.\n\nLearn more about your ad choices. Visit megaphone.fm/adchoices\nLearn more about your ad choices. Visit megaphone.fm/adchoices",
+      "podcastTitle": "Reuters Econ World",
+      "podcastArtwork": "https://megaphone.imgix.net/podcasts/3c37d102-0c70-11ef-9f2a-d3c80df1fc79/image/c9360d8be1b1cb6acd89a3d51bf8381c.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
+      "podcastId": "1746360591"
+    }
+  },
+  {
+    "id": "1200361736",
+    "podcast": {
+      "id": "1200361736",
+      "title": "The Daily",
+      "artist": "The New York Times",
+      "feedUrl": "https://feeds.simplecast.com/Sl5CSM3S",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/ab/64/66/ab6466a9-9a7d-e20e-7a3d-bc5be37d29ce/mza_15084852813176276273.jpg/600x600bb.jpg",
+      "category": "Daily News",
+      "trackCount": 2759
+    },
+    "enabled": true,
+    "isLoadingEpisode": false,
+    "latestEpisode": {
+      "id": "122288e1-f467-4a0e-a730-7bb21298b01c",
+      "title": "What This Democrat’s Surge in Texas Says About the Midterms",
+      "audioUrl": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/pfx.vpixl.com/6qj4J/pscrb.fm/rss/p/tracking.swap.fm/track/4jdbJYYRKqK96EGqOzQb/nyt.simplecastaudio.com/03d8b493-87fc-4bd1-931f-8a8e9b945d8a/episodes/4acc7176-fbf5-4698-90ff-3abe39dc677f/audio/128/default.mp3?aid=rss_feed&awCollectionId=03d8b493-87fc-4bd1-931f-8a8e9b945d8a&awEpisodeId=4acc7176-fbf5-4698-90ff-3abe39dc677f&feed=Sl5CSM3S",
+      "pubDate": "Sat, 24 Oct 2026 10:00:00 +0000",
+      "duration": "0h 41m",
+      "description": "Gina Hinojosa, the Democratic nominee for governor, on her appeal to MAGA voters and her refusal to engage in the “culture wars.”\n\nThoughts? Email us at theinterview@nytimes.com\nWatch our show on YouTube: youtube.com/@TheInterviewPodcast\nFor transcripts and more, visit: nytimes.com/theinterview\n\n\nFor more information on today’s episode, visit nytimes.com/thedaily. Transcripts of each episode will be made available by the next workday. \n \nSubscribe today at nytimes.com/podcasts or on Apple Podcasts, Spotify and Amazon Music. You can also subscribe via your favorite podcast app here https://www.nytimes.com/activate-access/audio?source=podcatcher. For more podcasts and narrated articles, download The New York Times app at nytimes.com/app.\n\n Hosted by Simplecast, an AdsWizz company. See pcm.adswizz.com for information about our collection and use of personal data for advertising.",
+      "podcastTitle": "The Daily",
+      "podcastArtwork": "https://image.simplecastcdn.com/images/7f2f4c05-9c2f-4deb-82b7-b538062bc22d/73549bf1-94b3-40ff-8aeb-b4054848ec1b/3000x3000/the-daily-album-art-original.jpg?aid=rss_feed",
+      "podcastId": "1200361736"
+    }
+  },
+  {
+    "id": "73329404",
+    "podcast": {
+      "id": "73329404",
+      "title": "This Week in Tech (Audio)",
+      "artist": "TWiT",
+      "feedUrl": "https://feeds.twit.tv/twit.xml",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/9b/96/ac/9b96ac54-6ef1-9380-43ad-83f3066155a0/mza_10914428610214068995.jpg/600x600bb.jpg",
+      "category": "Technology",
+      "trackCount": 224
+    },
+    "enabled": true,
+    "isLoadingEpisode": false,
+    "latestEpisode": {
+      "id": "https://pdst.fm/e/pscrb.fm/rss/p/mgln.ai/e/294/cdn.twit.tv/cap/twit_1106/6f13c6bc-2078-4c73-a5b7-d32909292336.mp3",
+      "title": "TWiT 1106: The 10-Day Reply Guy - RAMageddon, HomeView, Ikigai, & the Flying Tesla Roadster",
+      "audioUrl": "https://pdst.fm/e/pscrb.fm/rss/p/mgln.ai/e/294/cdn.twit.tv/cap/twit_1106/6f13c6bc-2078-4c73-a5b7-d32909292336.mp3",
+      "pubDate": "Sun, 18 Oct 2026 18:43:13 PDT",
+      "duration": "2h 51m",
+      "description": "Apple's long-delayed kitchen device and Tesla's flying car spectacle make this panel one you won't want to miss! Data center delays, AI-driven job shakeups, and real-time debates on the real winners in broadband show that the tech landscape isn't just shifting; it's being rebuilt in real time.\n \nThe Tesla Roadster should go into production in 2028, but don't get your hopes up - Engadget\n \nOrder to limit Starshield for Ukraine came from inside White House, sources say\n \nMicrosoft Surface Laptop Ultra review: RTX Spark in a straight-up beautiful Windows PC\n \nAmerica's $10tn AI infrastructure boom is starting to fray\n \nApple's HomeView Offers Tantalizing Preview of a Future Robotic Version\n \nApple blames 'extraordinary' demand as foldable iPhones sell out\n \nF.B.I. Arrests OpenAI Employee Accused of Planting Bug in Office\n \nMeta and Apple, Longtime Foes, Team Up to Put Open-Weight AI on Macs\n \nAmazon has over 1 million robot workers. What's next for human employees?\n \nHow to track Flock cameras using MapQuest\n \nHost: Leo Laporte\n \nGuests: Gina Smith and Jason Calacanis\n \nDownload or subscribe to This Week in Tech at https://twit.tv/shows/this-week-in-tech\n \nJoin Club TWiT for Ad-Free Podcasts!\n \nSupport what you love and get ad-free audio and video feeds, a members-only Discord, and exclusive content. Join today: https://twit.tv/clubtwit\nSponsors:\nPaloAltoNetworks.com/Idira\ncoveron.com/thisweekintech and use code thisweekintech\nNetSuite.com/TWIT\ncachefly.com/twit",
+      "podcastTitle": "This Week in Tech (Audio)",
+      "podcastArtwork": "https://elroy.twit.tv/sites/default/files/styles/twit_album_art_2048x2048/public/images/shows/this_week_in_tech/album_art/audio/twit_2022albumart_standard_2048.jpg",
+      "podcastId": "73329404"
+    }
+  },
+  {
+    "id": "79016499",
+    "podcast": {
+      "id": "79016499",
+      "title": "Security Now (Audio)",
+      "artist": "TWiT",
+      "feedUrl": "https://feeds.twit.tv/sn.xml",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/a1/be/2b/a1be2b5b-416d-eb8b-f008-dbf8f4dad378/mza_13520720204623959175.jpg/600x600bb.jpg",
+      "category": "Technology",
+      "trackCount": 225
+    },
+    "enabled": true,
+    "isLoadingEpisode": false,
+    "latestEpisode": {
+      "id": "https://pdst.fm/e/pscrb.fm/rss/p/mgln.ai/e/294/cdn.twit.tv/cap/sn_1101/6466d0c3-70f6-49e0-b4dd-daf08801bc0a.mp3",
+      "title": "SN 1101: ECDSA's Curves Origins - When AI Becomes the Attacker",
+      "audioUrl": "https://pdst.fm/e/pscrb.fm/rss/p/mgln.ai/e/294/cdn.twit.tv/cap/sn_1101/6466d0c3-70f6-49e0-b4dd-daf08801bc0a.mp3",
+      "pubDate": "Tue, 20 Oct 2026 17:30:45 PDT",
+      "duration": "2h 31m",
+      "description": "An unreleased AI solved a 26-year-old cryptographic secret in less than half an hour, exposing the origins of a widely used standard. Discover what this jaw-dropping breakthrough means for the future of trust and transparency in cybersecurity.\n \nAnother record smashing Patch Tuesday.\n \nBut again, all those updates were not without consequences.\n \nPalo Alto Networks' Unit 42 reports on an agentic attack.\n \nA mass-compromised hardware cryptocurrency wallet attack.\n \nHow to create your own known-safe crypto wallet.\n \nFeedback about AI, coding and SpinRite from a listener.\n \nWhat the reverse-engineering of the ECDSA curves means for security\n \nShow Notes - https://www.grc.com/sn/SN-1101-Notes.pdf\n \nHosts: Steve Gibson and Mikah Sargent\n \nDownload or subscribe to Security Now at https://twit.tv/shows/security-now.\n \nYou can submit a question to Security Now at the GRC Feedback Page.\n \nFor 16kbps versions, transcripts, and notes (including fixes), visit Steve's site: grc.com, also the home of the best disk maintenance and recovery utility ever written Spinrite 6.\n \nJoin Club TWiT for Ad-Free Podcasts!\n \nSupport what you love and get ad-free audio and video feeds, a members-only Discord, and exclusive content. Join today: https://twit.tv/clubtwit\nSponsors:\nbitwarden.com/twit\njoindeleteme.com/twit-biz\nthreatlocker.com/twit\ncanary.tools/twit - use code: TWIT\nguardsquare.com",
+      "podcastTitle": "Security Now (Audio)",
+      "podcastArtwork": "https://elroy.twit.tv/sites/default/files/styles/twit_album_art_2048x2048/public/images/shows/security_now/album_art/audio/sn2022_albumart_standard_2400.jpg",
+      "podcastId": "79016499"
+    }
+  },
+  {
+    "id": "326120877",
+    "podcast": {
+      "id": "326120877",
+      "title": "Intelligent Machines (Audio)",
+      "artist": "TWiT",
+      "feedUrl": "https://feeds.twit.tv/twig.xml",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/73/e8/dd/73e8ddb8-45d8-4e36-b085-3bc682eebc3a/mza_10049294359728907591.jpg/600x600bb.jpg",
+      "category": "Technology",
+      "trackCount": 220
+    },
+    "enabled": true,
+    "isLoadingEpisode": false,
+    "latestEpisode": {
+      "id": "TWiT-1653-893-863461",
+      "title": "IM 893: It All Comes Back to Cats - From Academic Papers to 1.2 Million Startup Ideas",
+      "audioUrl": "https://pdst.fm/e/pscrb.fm/rss/p/mgln.ai/e/294/cdn.twit.tv/cap/twig_893/443c5000-de1f-4c2c-a8e3-6d42d6e820fa.mp3",
+      "pubDate": "Wed, 21 Oct 2026 18:32:11 PDT",
+      "duration": "2h 26m",
+      "description": "From AI-generated Halloween scares to personal assistants that just won't quit, the age of at-home intelligence is here. But with each new feature, your privacy, security, and digital autonomy hang in the balance.\n \nNemotron 3.5 Super VL\n \nMeta's Muse AI agent hits 10.9 million downloads as ChatGPT slides 25%\n \nReleased This Week : Flux 3 Image Klein (Open Weights)\n \n\"Introducing Muse Spark Open, The Most Capable US Open‑Weight Model to Date\"\n \nVideo on the DSX Pod starting at 30:40\n \nWhat if we've misunderstood how AI thinks?\n \nFirst large‑scale agentic cyberattack on OpenCode\n \nAI Just Found a Bug That Puts up to 70% of the World's Websites at Risk\n \nThe Internet goes on high alert after discovery of 8 compromised TLS certs\n \nGerman Court Rules Google Earth is \"Spying\" on People by Publishing Aerial Photos of Their Homes\n \nAnthropic quietly pitches its own AI safety bill to lawmakers\n \nMusk, Anthropic outline dueling approaches to AI-era philanthropy\n \nAnthropic S-1\n \nLarry Ellison Went on Borrowing Spree to Bankroll His Son's Warner Bros. Bid\n \nBill Gross's AI Tool Could Supercharge the Number of Startups\n \nRoundtables: A Conversation With the Creator of AI-Designed Viruses\n \nNew AI tool can predict cancer survival by a single patient selfie, study suggests\n \nCraig Newmark AMA\n \nA new SubwayTakes star rises: Debbie\n \nHow SubwayTakes's First Spinoff Star Outwitted Conan\n \nSome final words on Foursquare.\n \nSquad\n \nEditors Note: Jason Hiner's site is The Deep View, not the Deep Think. Sorry Jason!\n \nHosts: Louis Maresca, Jeff Jarvis, and Paris Martineau\n \nDownload or subscribe to Intelligent Machines at https://twit.tv/shows/intelligent-machines.\n \nJoin Club TWiT for Ad-Free Podcasts!\n \nSupport what you love and get ad-free audio and video feeds, a members-only Discord, and exclusive content. Join today: https://twit.tv/clubtwit\nSponsors:\nPaloAltoNetworks.com/Idira\noriginhq.com/intelligentmachines\nbitwarden.com/twit\noutshift.com",
+      "podcastTitle": "Intelligent Machines (Audio)",
+      "podcastArtwork": "https://elroy.twit.tv/sites/default/files/styles/twit_album_art_2048x2048/public/images/shows/Intelligent%20Machines/album_art/audio/IM_albumart_standard_0.jpg",
+      "podcastId": "326120877"
+    }
+  },
+  {
+    "id": "1469394914",
+    "podcast": {
+      "id": "1469394914",
+      "title": "The Journal.",
+      "artist": "The Wall Street Journal & Spotify Studios",
+      "feedUrl": "https://video-api.shdsvc.dowjones.io/api/podcasts/feed/the%20journal",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/0e/ca/910eca32-75a3-48b6-9be7-f45799ef5f2f/mza_9869666721903280546.jpg/600x600bb.jpg",
+      "category": "Daily News",
+      "trackCount": 1845
+    },
+    "enabled": true,
+    "isLoadingEpisode": false,
+    "latestEpisode": {
+      "id": "4070dcdc-cf23-11f1-9b24-137f0a24afb9",
+      "title": "The Money Problem Fueling France’s Riots",
+      "audioUrl": "https://pdst.fm/e/traffic.megaphone.fm/WSJ4905361280.mp3",
+      "pubDate": "Fri, 23 Oct 2026 20:37:00 -0000",
+      "duration": "21m 5s",
+      "description": "This past weekend, mayhem broke out alongside peaceful demonstrations in France. What started as a protest over school resources spiralled into anger over potential big cuts to social services. For years the country had a high appetite for borrowed money taken out at low interest rates. But today France is facing a fiscal reckoning as more than $1 trillion of that debt will come due by 2030. WSJ’s Stacy Meichtry explains how France’s debt bomb contributed to the unrest. Ryan Knutson hosts. \n\nFurther Listening:\n\n- Germany’s Economy Is Broken. There’s No Plan B. \n\n- Will France Elect a Far-Right President?\n\nSign up for WSJ’s free What’s News newsletter.\n\nLearn more about your ad choices. Visit megaphone.fm/adchoices",
+      "podcastTitle": "The Journal.",
+      "podcastArtwork": "https://megaphone.imgix.net/podcasts/b84f9932-8174-11e9-bbd8-7f261513f0c9/image/d84a4f4d55158df9d14f6f2d4b219a28.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
+      "podcastId": "1469394914"
+    }
+  },
+  {
+    "id": "152016440",
+    "podcast": {
+      "id": "152016440",
+      "title": "WSJ What’s News",
+      "artist": "The Wall Street Journal",
+      "feedUrl": "https://video-api.shdsvc.dowjones.io/api/podcasts/feed/the%20wall%20street%20journal%20whats%20news",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/87/e6/62/87e6629b-78fa-7b76-959a-901e020bc5c7/mza_13260730044840862954.jpg/600x600bb.jpg",
+      "category": "Daily News",
+      "trackCount": 605
+    },
+    "enabled": true,
+    "isLoadingEpisode": false,
+    "latestEpisode": {
+      "id": "646FD7E5-95B8-4443-B827-CE44BB9ECBFB",
+      "title": "What’s News in Markets: Meta’s AI Bill, IBM’s Comeback, Musk Explores Merger",
+      "audioUrl": "https://dowjones.simplecastaudio.com/3d1c8b0a-4b6d-4ea9-a455-ab1adaa7e74b/episodes/6a6297dd-034e-402a-864f-55b40c4ef64f/audio/128/default.mp3?aid=rss_feed&awCollectionId=3d1c8b0a-4b6d-4ea9-a455-ab1adaa7e74b&awEpisodeId=6a6297dd-034e-402a-864f-55b40c4ef64f&feed=BA5QWI2p",
+      "pubDate": "Sat, 24 Oct 2026 10:00:00 +0000",
+      "duration": "0h 5m",
+      "description": "Can Meta afford to keep spending on AI? And why is IBM bucking the tech selloff? Plus, could Elon Musk combine Tesla and SpaceX? Host Imani Moise discusses the biggest stock moves of the week and the news that drove them.\n\n\n\nSign up for the WSJ's free Markets A.M. newsletter.\n\n Hosted by Simplecast, an AdsWizz company. See pcm.adswizz.com for information about our collection and use of personal data for advertising.",
+      "podcastTitle": "WSJ What’s News",
+      "podcastArtwork": "https://image.simplecastcdn.com/images/2c92a2cd-3a2f-45b3-921e-47761cbb22bf/6217867a-d73c-4d6e-8480-4513279cce9c/3000x3000/wsjpodcastwhatsnews.jpg?aid=rss_feed",
+      "podcastId": "152016440"
+    }
+  },
+  {
+    "id": "1803015612",
+    "podcast": {
+      "id": "1803015612",
+      "title": "All Things with Kim Strassel",
+      "artist": "The Wall Street Journal",
+      "feedUrl": "https://video-api.shdsvc.dowjones.io/api/podcasts/feed/all%20things%20with%20kim%20strassel",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/2f/f3/96/2ff3964e-0dd4-c19f-d0f4-1029ae818da8/mza_11001377778884529438.jpeg/600x600bb.jpg",
+      "category": "Politics",
+      "trackCount": 68
+    },
+    "enabled": true,
+    "isLoadingEpisode": false,
+    "latestEpisode": {
+      "id": "C1B67231-37C2-4106-A4D7-9D3B188FC622",
+      "title": "Can Michele Tafoya Win the GOP a Minnesota Senate Seat?",
+      "audioUrl": "https://dowjones.simplecastaudio.com/6cc3a23b-e4d3-4a6e-a559-f2d23d856016/episodes/b36f7cdd-5120-487a-969d-2fcd15e569d2/audio/128/default.mp3?aid=rss_feed&awCollectionId=6cc3a23b-e4d3-4a6e-a559-f2d23d856016&awEpisodeId=b36f7cdd-5120-487a-969d-2fcd15e569d2&feed=j0IFeW8v",
+      "pubDate": "Tue, 20 Oct 2026 20:44:00 +0000",
+      "duration": "0h 25m",
+      "description": "Former sportscaster Michele Tafoya is running as a Republican in Minnesota, but with Democrats dealing with corruption scandals, is there an opening for the GOP? Kim Strassel speaks with Tafoya about tariffs, immigration reform, and the Iran war.\n \nHosted by Simplecast, an AdsWizz company. See pcm.adswizz.com for information about our collection and use of personal data for advertising.",
+      "podcastTitle": "All Things with Kim Strassel",
+      "podcastArtwork": "https://image.simplecastcdn.com/images/2c92a2cd-3a2f-45b3-921e-47761cbb22bf/cb822f2f-9125-484b-95ab-77d0fdc5907b/3000x3000/2ed7b2e626623249c7e26b438495c69c.png?aid=rss_feed",
+      "podcastId": "1803015612"
+    }
+  },
+  {
+    "id": "1487532573",
+    "podcast": {
+      "id": "1487532573",
+      "title": "Tomorrow's Solution Today",
+      "artist": "WSJ. Custom Studios",
+      "feedUrl": "http://video-api.shdsvc.dowjones.io/api/legacy/podcasts?column=paid%20program%20tomorrow%27s%20solutions%20today&doctype=468&partner=itunes",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/6f/be/1f/6fbe1f87-3256-0910-61c7-86d5a474d020/mza_7824957253205467795.jpg/600x600bb.jpg",
+      "category": "Business",
+      "trackCount": 4
+    },
+    "enabled": true,
+    "isLoadingEpisode": false,
+    "latestEpisode": {
+      "id": "87631F83-6A05-4C80-AE01-C7A7456CFE68",
+      "title": "Tower of Efficiency",
+      "audioUrl": "https://m.wsj.net/audio/20200224/honeywellhbtpodcastfinal/honeywellhbtpodcastfinal.mp3",
+      "pubDate": "Mon, 24 Feb 2020 19:22:35 +0000",
+      "duration": "0h 19m",
+      "description": "Predictive maintenance technology keeps this iconic skyscraper operating at the highest level.",
+      "podcastTitle": "Tomorrow's Solution Today",
+      "podcastArtwork": "https://m.wsj.net/itunes-artwork/paid_program_tomorrow's_solutions_today/paid_program_tomorrow's_solutions_today_150x150.jpg",
+      "podcastId": "1487532573"
+    }
+  }
+];
+
+export const DEFAULT_SETTINGS: AppSettings = {
+  "playbackRate": 1.25,
+  "autoAdvance": true,
+  "activeTab": "briefing",
+  "addPosition": "bottom",
+  "smallTextSize": "larger"
+};
+
+export const DEFAULT_PLAYBACK_STATE: StoredPlaybackState = {
+  "trackIndex": 6,
+  "lastEpisodeId": null,
+  "currentTime": 0
+};
